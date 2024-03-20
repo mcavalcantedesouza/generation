@@ -7,10 +7,10 @@ let media;
 
 leia = require('readline-sync');
 
-n1 = leia.questionFloat('Digite a primeira nota: ');
-n2 = leia.questionFloat('Digite a segunda nota: ');
-n3 = leia.questionFloat('Digite a terceira nota: ');
-n4 = leia.questionFloat('Digite a quarta nota: ');
+n1 = leia.questionFloat('Digite a primeira nota:');
+n2 = leia.questionFloat('Digite a segunda nota:');
+n3 = leia.questionFloat('Digite a terceira nota:');
+n4 = leia.questionFloat('Digite a quarta nota:');
 
-media = (n1+n2+n3+n4)/4;
+media = (n1 + n2 + n3 + n4)/4;
 console.log(`Sua média final é de ${media}.`)
