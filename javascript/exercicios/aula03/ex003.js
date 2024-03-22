@@ -1,19 +1,16 @@
-let salarioBruto;
-let adicionalNoturno;
-let horasExtras;
-let descontos;
-let salarioLiquido;
-let leia = require('readline-sync');
+let nome,idade,primeiraDoacao;
+const leia = require('readline-sync');
 
-salarioBruto = leia.questionFloat('Digite o valor do salario bruto: ');
+nome = leia.question("Digite o nome do doador: ");
+idade = leia.questionInt("Digite a idade do doador: ");
+primeiraDoacao = leia.keyInYNStrict("E a primeira doacao? ");
 
-adicionalNoturno = leia.questionFloat('Digite o valor do adicional noturno: ');
+console.log(primeiraDoacao)
 
-horasExtras = leia.questionFloat('Digite o valor das horas extras: ');
-
-descontos = leia.questionFloat('Digite o valor dos descontos: ');
-
-salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras*5) - descontos;
-
-console.log(`O salário líquido é de ${salarioLiquido}.`);
-
+if(idade >= 18 && idade < 60){
+    console.log(`Doador ${nome} está apto para doação.`);
+}else if(idade >= 60 && idade <= 69 && primeiraDoacao == false){
+    console.log(`Doador ${nome} está apto para doação.`);
+}else{
+    console.log(`Doador ${nome} não está apto para doação.`);
+}

@@ -1,16 +1,20 @@
-let nome,idade,primeiraDoacao;
 const leia = require('readline-sync');
 
-nome = leia.question("Digite o nome do doador: ");
-idade = leia.questionInt("Digite a idade do doador: ");
-primeiraDoacao = leia.keyInYNStrict("E a primeira doacao? ");
+let idadeMenor = 0,idadeMaior = 0, idade = 0;
 
-console.log(primeiraDoacao)
+while(idade >= 0){
+    idade = leia.questionInt('Digite uma idade ou um numero negativo para sair: '); 
+    if (idade < 21 && idade > 0){
+        idadeMenor++;
+    }
 
-if(idade >= 18 && idade < 60){
-    console.log(`Doador ${nome} está apto para doação.`);
-}else if(idade >= 60 && idade <= 69 && primeiraDoacao == false){
-    console.log(`Doador ${nome} está apto para doação.`);
-}else{
-    console.log(`Doador ${nome} não está apto para doação.`);
+    if (idade > 50){
+        idadeMaior++;
+    }
+    
 }
+
+console.log(`Total de pessoas menor de 21 anos: ${idadeMenor}`);
+console.log(`Total de pessoas maior de 50 anos: ${idadeMaior}`);
+
+

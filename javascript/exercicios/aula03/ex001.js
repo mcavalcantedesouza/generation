@@ -1,16 +1,14 @@
-let salario;
-let leia;
-let abono;
-let novoSalario;
+let a,b,c;
+const leia = require('readline-sync');
 
+a = leia.questionInt("Insira o primeiro numero inteiro: ");
+b = leia.questionInt("Insira o segundo numero inteiro: ");
+c = leia.questionInt("Insira o terceiro numero inteiro: ");
 
-leia = require('readline-sync');
-
-salario = leia.questionFloat("Digite o Salario: ");
-console.log(`O salário é de R$${salario}`);
-
-abono = leia.questionFloat("Digite o abono: ");
-console.log(`O abono é de R$${abono}`);
-
-novoSalario = salario + abono;
-console.log(`O novo salário é de R$${novoSalario}`)
+if (a + b > c){
+    console.log(`A soma de ${a} + ${b} é maior que ${c}.`)
+}else if (a + b < c){
+    console.log(`A soma de ${a} + ${b} é menor que ${c}.`)
+}else {
+    console.log(`A soma de ${a} + ${b} é igual a ${c}.`)
+}
