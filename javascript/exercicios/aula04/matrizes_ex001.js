@@ -24,4 +24,4 @@ for(let i = 0; i < matriz.length; i++){
     resultado[i] = media.toFixed(1)
 }
 
-console.log(resultado)
+console.table(resultado)
