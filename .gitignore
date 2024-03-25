@@ -1,1 +1,8 @@
+# Ignorar diretório node_modules gerado pelo npm
 node_modules/
+
+# Ignorar arquivos package-lock.json gerados pelo npm
+package-lock.json
+
+# Ignorar arquivos .env gerados pelo npm (se aplicável)
+.env
